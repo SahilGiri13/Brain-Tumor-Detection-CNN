@@ -428,24 +428,35 @@ IMAGE_SIZE = (224, 224)
 # 4. LOAD TRAINED MODEL
 # ============================================================
 
+
 @st.cache_resource
 def load_trained_model():
 
     for model_path in MODEL_PATHS:
 
-        if os.path.exists(model_path):
+        if os.path.isfile(model_path):
 
-            loaded_model = tf.keras.models.load_model(
-                model_path,
-                compile=False
-            )
+            try:
+                loaded_model = tf.keras.models.load_model(
+                    model_path,
+                    compile=False
+                )
 
-            return loaded_model, model_path
+                print("Model loaded successfully:", model_path)
 
-    return None, None
+                return loaded_model, model_path
+
+            except Exception as e:
+                st.error(f"Error loading model: {e}")
+                raise
+
+    raise FileNotFoundError(
+        f"Model not found. Checked paths: {MODEL_PATHS}"
+    )
 
 
 model, loaded_model_path = load_trained_model()
+
 
 
 # ============================================================
