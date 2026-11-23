@@ -13,8 +13,5 @@
 streamlit
 tensorflow==2.21.0
 numpy>=1.26,<2.2
-pandas
 Pillow
-matplotlib
-seaborn
-h5py
+pandas
