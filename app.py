@@ -410,8 +410,8 @@ header[data-testid="stHeader"] {
 # ============================================================
 
 MODEL_PATHS = [
-    "brain_tumor_model.keras",
-    os.path.join("models", "brain_tumor_model.keras")
+    "brain_tumor_model_fixed.keras",
+    os.path.join("models", "brain_tumor_model_fixed.keras")
 ]
 
 CLASS_NAMES = [
