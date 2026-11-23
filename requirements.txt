@@ -1,10 +1,20 @@
-pandas
-numpy
-tensorflow
-matplotlib
-kagglehub
+# pandas
+# numpy
+# tensorflow
+# matplotlib
+# kagglehub
+# streamlit
+# seaborn
+# scikit-learn
+# opencv-python
+# pillow
+
+
 streamlit
+tensorflow==2.10.1
+numpy==1.23.5
+protobuf==3.19.6
+pandas
+Pillow
+matplotlib
 seaborn
-scikit-learn
-opencv-python
-pillow
